@@ -4,7 +4,12 @@ import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@ap
 import { setContext } from '@apollo/client/link/context';
 // Imports
 import Navigation from './components/Navigation';
-import Header from './components/Header'
+import Header from './components/Header';
+
+import Home from './pages/Home';
+import Services from './pages/Services';
+import Contact from './pages/Contact';
+import Careers from './pages/Careers'
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -34,20 +39,39 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div className='l-display-container'>  
-          <div className='flex space-between margin-1101 padding-bottom-1 border-bottom pinned-top bg-white m-display-margin-1202 l-display-margin-1101'>
+        <>  
+          <div className='flex space-between border-bottom width-100 padding-1111 pinned-top bg-white m-display-padding-0111 l-display-container l-display-padding-1000'>
             <Header />
             <Navigation />
           </div>
 
           <Routes>
+            <Route 
+                path='/' 
+                element={<Home />} 
+            />
+
+            <Route 
+              path='/services' 
+              element={<Services />} 
+            />
+
+            <Route 
+              path='/contact' 
+              element={<Contact />} 
+            />
+
+            <Route 
+              path='/careers' 
+              element={<Careers />} 
+            />
 
             <Route 
               path='*'
               element={<h1 className=''>Wrong page!</h1>}
             />
           </Routes>
-        </div>
+        </>
       </Router>
     </ApolloProvider>
   );

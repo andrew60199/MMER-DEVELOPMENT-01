@@ -13,11 +13,23 @@ const Navigation = () => {
                     <img src='./icon-menu.svg'/>
                 </button>
             </nav> */}
-            <nav className=''>
+            <nav className='l-display-margin-0100'>
                 <ul className='flex'>
-                    <li className='margin-right-1 small-font'>SERVICES</li>
-                    <li className='margin-right-1 small-font'>CONTACT US</li>
-                    <li className='small-font'>CAREERS</li>
+                    <li className='margin-0100' >
+                        <button className='bg-transparent border-none cursor small-font'>
+                            <Link to='/services'>SERVICES</Link>
+                        </button>
+                    </li>
+                    <li className='margin-0100'>
+                        <button className='bg-transparent border-none cursor small-font'>
+                            <Link to='/contact'>CONTACT US</Link>
+                        </button>
+                    </li>
+                    <li>
+                        <button className='bg-transparent border-none cursor small-font'>
+                            <Link to='/careers'>CAREERS</Link>
+                        </button>    
+                    </li>
                 </ul>
             </nav>
         </>
