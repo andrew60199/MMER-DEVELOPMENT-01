@@ -34,8 +34,8 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <>  
-          <div className='flex space-between margin-1-1-0-1-1 padding-bottom-1 border-bottom pinned-top bg-white'>
+        <div className='l-display-container'>  
+          <div className='flex space-between margin-1101 padding-bottom-1 border-bottom pinned-top bg-white m-display-margin-1202 l-display-margin-1101'>
             <Header />
             <Navigation />
           </div>
@@ -47,7 +47,7 @@ function App() {
               element={<h1 className=''>Wrong page!</h1>}
             />
           </Routes>
-        </>
+        </div>
       </Router>
     </ApolloProvider>
   );
