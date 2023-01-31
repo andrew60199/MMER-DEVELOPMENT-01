@@ -1,1 +1,123 @@
+:root {
+  --sunset-orange: #FF6B00;
+}
 
+.sunset-orange {
+  color: var(--sunset-orange)
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.bg-transparent {
+  background-color: rgba(0, 0, 0, 0.0); 
+}
+
+/* 
+################
+
+!TEXT 
+
+################
+*/
+.small-font {
+  font-size: .75rem;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+/* 
+################
+
+!POSITION 
+
+################
+*/
+.flex {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.pinned-top {
+  top: 0;
+}
+
+/* 
+################
+
+!PADDING 
+
+################
+*/
+.padding-bottom-1 {
+  padding-bottom: 1rem;
+}
+
+.mobile-padding-top-05 {
+  padding-top: .5rem;
+}
+
+/* 
+################
+
+!MARGIN 
+
+################
+*/
+.margin-1-1-0-1-1 {
+  margin: 1rem 1rem 0 1rem;
+}
+
+.margin-right-1 {
+  margin-right: 1rem;
+}
+
+.border-bottom {
+  border-bottom: solid 1px black;
+}
+
+
+
+/* 
+################
+
+!OTHER
+
+################
+*/
+.desktop {
+  display: none;
+}
+
+.border-none {
+  border: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 769px) {
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+  }
+
+  .mobile-padding-top-05 {
+    padding: 0;
+  }
+
+}

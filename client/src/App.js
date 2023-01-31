@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 // Imports
+import Navigation from './components/Navigation';
+import Header from './components/Header'
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -32,8 +34,12 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <>
-          <Navbar />
+        <>  
+          <div className='flex space-between margin-1-1-0-1-1 padding-bottom-1 border-bottom pinned-top bg-white'>
+            <Header />
+            <Navigation />
+          </div>
+
           <Routes>
 
             <Route 
