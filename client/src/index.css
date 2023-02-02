@@ -104,6 +104,10 @@ p {
   float: right;
 }
 
+.align-content-center {
+  align-items: center;
+}
+
 /* 
 ################
 
@@ -118,6 +122,10 @@ p {
 
 .padding-0010 {
   padding-bottom: 1rem;
+}
+
+.padding-00500 {
+  padding-right: .5rem;
 }
 
 .padding-0010 {

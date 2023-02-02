@@ -93,7 +93,6 @@ function App() {
               path='/portal' 
               element={
                 <>
-                  
                   <Portal />
                 </>
               } 
