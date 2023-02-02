@@ -33,6 +33,11 @@
 
 ################
 */
+
+p {
+  line-height: normal;
+}
+
 .small-font {
   font-size: .75rem;
 }
@@ -59,6 +64,10 @@
 
 .block {
   display: block;
+}
+
+.inline {
+  display: inline;
 }
 
 .flex {
@@ -149,6 +158,10 @@
 
 .margin-0111 {
   margin: 0 1rem 1rem 1rem;
+}
+
+.margin-2111 {
+  margin: 2rem 1rem 1rem 1rem;
 }
 
 .margin-4000 {

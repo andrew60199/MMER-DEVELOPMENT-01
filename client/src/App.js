@@ -10,6 +10,8 @@ import Home from './pages/Home';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 import Careers from './pages/Careers'
+import Legals from './pages/Legals';
+import Portal from './pages/Portal';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -40,6 +42,7 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <>  
+          {/* Fix this so that we can have the correct headers passed on the website or portal */}
           <div className='flex space-between border-bottom width-100 padding-1111 pinned-top bg-white m-display-padding-0111 l-display-container l-display-padding-1000'>
             <Header />
             <Navigation />
@@ -64,6 +67,16 @@ function App() {
             <Route 
               path='/careers' 
               element={<Careers />} 
+            />
+
+            <Route 
+              path='/legals' 
+              element={<Legals />} 
+            />
+
+            <Route 
+              path='/portal' 
+              element={<Portal />} 
             />
 
             <Route 

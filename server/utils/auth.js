@@ -29,12 +29,10 @@ module.exports = {
       console.log('Invalid token');
     }
 
-    console.log('req', req)
-
     return req
   },
-  signToken: function ({ username, email, _id }) {
-    const payload = { username, email, _id };
+  signToken: function ({ email, _id }) {
+    const payload = { email, _id };
 
     return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
   },
