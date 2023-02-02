@@ -50,18 +50,9 @@ const UserEntryForm = () => {
             const { data } = await login({
                 variables: { email, password },
             }); 
-      
-            Auth.login(data.login.token);
-
-            // Send them to the development portal URL
-            // window.location.assign('/portal')
-            // The code above refreshes the page
-
-            window.location.replace('/portal')
-
-            // if (data) {
-            //     return <Navigate to="/portal" replace={true}/>
-            // }            
+            
+            // Take them to portal route
+            Auth.login(data.login.token);         
 
         } catch (err) {
             if(err.message === 'No user found with this email address') {
@@ -93,18 +84,28 @@ const UserEntryForm = () => {
         
             Auth.login(data.addUser.token);
 
-            // Send them to the development portal URL
-
-
         } catch (err) {
             if(err) {
                 setShowError('Failed to create an account. Please try again later.')
             }
         }
     }
+
+    const resetStates = () => {
+        setProgress('')
+        setEmail('')
+        setPassword('')
+        setConfirmPassword('')
+        setName('')
+        setTerms('')
+        setShowError('')
+    }
     
     return (
         <form className='bg-light-grey l-display-container padding-1010'>
+            {(progress !== '') && 
+                <button className='float-right margin-0111 border-none cursor' onClick={resetStates}>Cancel logging in or signing up</button>
+            }
             <label className='block regular large-font margin-0111'>{
                     (progress === 'email' || progress === 'password') && 'ENTER YOUR'
                 }{

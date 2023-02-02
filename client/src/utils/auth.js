@@ -37,7 +37,7 @@ class AuthService {
     // Saves user token to localStorage
     localStorage.setItem('id_token', idToken);
     // Takes them to the portal page
-    <Navigate to="/portal" />
+    window.location.replace('/portal')
   }
 
   logout() {
