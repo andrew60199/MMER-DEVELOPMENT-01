@@ -10,7 +10,7 @@ const Portal = () => {
         <>
             <PortalHeader />
             <div className='margin-1111 l-display-container'>
-                <h1 className='margin-4000'>MMER DEVELOPMENT PORTAL</h1>
+                <h1 className='margin-4000'>Dashboard</h1>
             </div>
         </>      
     )

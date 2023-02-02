@@ -54,6 +54,11 @@ p {
   font-weight: 700;
 }
 
+.small-icon {
+  height: 1.2rem;
+  width: 1.2rem;
+}
+
 /* 
 ################
 
@@ -124,12 +129,20 @@ p {
   padding-bottom: 1rem;
 }
 
-.padding-00500 {
+.padding-00-500 {
   padding-right: .5rem;
+}
+
+.padding-1-25000 {
+  padding-top: 1.25rem;
 }
 
 .padding-0010 {
   padding-bottom: 1rem;
+}
+
+.padding-0001 {
+  padding-left: 1rem;
 }
 
 .padding-1111 {
@@ -147,7 +160,6 @@ p {
 .padding-2020 {
   padding: 2rem 0;
 }
-
 
 
 /* .mobile-padding-top-05 {
