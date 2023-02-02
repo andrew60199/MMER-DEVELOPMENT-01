@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER, ADD_USER } from '../utils/mutations';
@@ -55,8 +55,13 @@ const UserEntryForm = () => {
 
             // Send them to the development portal URL
             // window.location.assign('/portal')
-            // The code above refreshes the page. so therefore is not the correct way to go about it
+            // The code above refreshes the page
 
+            window.location.replace('/portal')
+
+            // if (data) {
+            //     return <Navigate to="/portal" replace={true}/>
+            // }            
 
         } catch (err) {
             if(err.message === 'No user found with this email address') {
