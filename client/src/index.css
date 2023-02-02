@@ -6,6 +6,14 @@
   color: var(--sunset-orange)
 }
 
+.bg-sunset-orange {
+  background-color: var(--sunset-orange)
+}
+
+.white {
+  color: white;
+}
+
 .bg-white {
   background-color: white;
 }
@@ -25,6 +33,11 @@
 
 ################
 */
+
+p {
+  line-height: normal;
+}
+
 .small-font {
   font-size: .75rem;
 }
@@ -48,8 +61,21 @@
 
 ################
 */
+
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
 .flex {
   display: flex;
+}
+
+.flex-direction-col {
+  flex-direction: column;
 }
 
 .space-between {
@@ -90,6 +116,14 @@
   padding: 1rem;
 }
 
+.padding-1010 {
+  padding: 1rem 0;
+}
+
+.padding-1212 {
+  padding: 1rem 2rem;
+}
+
 /* .mobile-padding-top-05 {
   padding-top: .5rem;
 } */
@@ -118,6 +152,18 @@
   margin-right: 1rem;
 }
 
+.margin-0101 {
+  margin: 0 1rem;
+}
+
+.margin-0111 {
+  margin: 0 1rem 1rem 1rem;
+}
+
+.margin-2111 {
+  margin: 2rem 1rem 1rem 1rem;
+}
+
 .margin-4000 {
   margin-top: 4rem;
 }
@@ -141,6 +187,10 @@
 
 .border-bottom {
   border-bottom: solid 1px black;
+}
+
+.border-radius-1 {
+  border-radius: 1rem;
 }
 
 .cursor {

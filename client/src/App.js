@@ -3,13 +3,14 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 // Imports
-import Navigation from './components/Navigation';
-import Header from './components/Header';
+import WebsiteHeader from './components/WebsiteHeader';
 
 import Home from './pages/Home';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 import Careers from './pages/Careers'
+import Legals from './pages/Legals';
+import Portal from './pages/Portal';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -40,35 +41,74 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <>  
-          <div className='flex space-between border-bottom width-100 padding-1111 pinned-top bg-white m-display-padding-0111 l-display-container l-display-padding-1000'>
-            <Header />
-            <Navigation />
-          </div>
-
           <Routes>
+            {/* Website Routes */}
             <Route 
-                path='/' 
-                element={<Home />} 
+              path='/' 
+              element={
+                <>
+                  <WebsiteHeader />
+                  <Home /> 
+                </>
+              }   
             />
-
             <Route 
               path='/services' 
-              element={<Services />} 
+              element={
+                <>
+                  <WebsiteHeader />
+                  <Services /> 
+                </>
+              }   
             />
-
             <Route 
               path='/contact' 
-              element={<Contact />} 
+              element={
+                <>
+                  <WebsiteHeader />
+                  <Contact /> 
+                </>
+              }   
             />
-
             <Route 
               path='/careers' 
-              element={<Careers />} 
+              element={
+                <>
+                  <WebsiteHeader />
+                  <Careers /> 
+                </>
+              }   
+            />
+            <Route 
+              path='/legals' 
+              element={
+                <>
+                  <WebsiteHeader />
+                  <Legals /> 
+                </>
+              }   
+            />
+            {/* Development Portal Routes */}
+            <Route 
+              path='/portal' 
+              element={
+                <>
+                  
+                  <Portal />
+                </>
+              } 
             />
 
             <Route 
               path='*'
-              element={<h1 className=''>Wrong page!</h1>}
+              element={
+                <>
+                  <WebsiteHeader />
+                  <div className='margin-1111 l-display-container'>
+                    <h1 className='margin-4000'>Whoops this page doesn't exist.</h1>
+                  </div>
+                </>                
+              }
             />
           </Routes>
         </>
