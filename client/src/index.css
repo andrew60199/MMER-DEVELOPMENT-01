@@ -267,6 +267,13 @@ a:visited {
 
 } */
 
+@media screen and (max-width: 565px) {
+  .margin-10000 {
+    margin-top: 12rem;
+  }
+
+}
+
 /* Tablet and laptop displays */
 @media screen and (min-width: 769px) and (max-width: 1600px) {
   .m-display-padding-1111 {
