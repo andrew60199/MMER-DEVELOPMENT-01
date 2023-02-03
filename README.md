@@ -6,6 +6,10 @@ Connecting clients and developers to build web apps...
 
 Which we will show you properly soon.
 
+Aspects of the app that can / will be improved in the future: 
+- Password validation (length, digit and special character)
+- 
+
 ## Table of Contents
   - [Description](#description)
   - [Table of Contents](#table-of-contents)

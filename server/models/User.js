@@ -21,7 +21,12 @@ const userSchema = new Schema(
       type: Boolean,
       required: true,
       default: false
-    }
+    },
+    role: {
+      type: String,
+      required: true,
+      default: 'client'
+    },
   },
 );
 

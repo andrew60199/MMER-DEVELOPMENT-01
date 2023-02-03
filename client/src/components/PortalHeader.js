@@ -18,6 +18,9 @@ const PortalHeader = () => {
                             </Link>
                             <nav>
                                 <ul className='flex padding-1-25000'>
+                                <li className='small-font'>
+                                        <Link to='/portal'>DASHBOARD</Link>
+                                    </li>
                                     <li className='small-font padding-0001'>
                                         <Link to='/portal/account'>ACCOUNT</Link>
                                     </li>

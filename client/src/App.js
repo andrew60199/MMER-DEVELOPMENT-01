@@ -41,6 +41,7 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
+      {/* https://www.youtube.com/watch?v=Ul3y1LXxzdU */}
       <Router>
         <>  
           <Routes>
@@ -56,7 +57,7 @@ function App() {
             {/* Development Portal Routes */}
             <Route path='/portal' element={<PortalHeader />}>
               <Route index element={<Portal />}/>
-              <Route path='/portal/account' element={<Account />}/>
+              <Route path='account' element={<Account />}/>
             </Route>
 
             <Route 
