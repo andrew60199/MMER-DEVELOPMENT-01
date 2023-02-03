@@ -3,8 +3,6 @@ import { Link, Navigate } from 'react-router-dom';
 import Auth from '../utils/auth'
 
 const Portal = () => {
-    // Protect this route
-
 
     return (
         <>
