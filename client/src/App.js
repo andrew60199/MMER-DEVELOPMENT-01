@@ -2,15 +2,17 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-// Imports
+// Components
 import WebsiteHeader from './components/WebsiteHeader';
-
+import PortalHeader from './components/PortalHeader';
+// Pages
 import Home from './pages/Home';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 import Careers from './pages/Careers'
 import Legals from './pages/Legals';
 import Portal from './pages/Portal';
+import Account from './pages/Account';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -43,61 +45,19 @@ function App() {
         <>  
           <Routes>
             {/* Website Routes */}
-            <Route 
-              path='/' 
-              element={
-                <>
-                  <WebsiteHeader />
-                  <Home /> 
-                </>
-              }   
-            />
-            <Route 
-              path='/services' 
-              element={
-                <>
-                  <WebsiteHeader />
-                  <Services /> 
-                </>
-              }   
-            />
-            <Route 
-              path='/contact' 
-              element={
-                <>
-                  <WebsiteHeader />
-                  <Contact /> 
-                </>
-              }   
-            />
-            <Route 
-              path='/careers' 
-              element={
-                <>
-                  <WebsiteHeader />
-                  <Careers /> 
-                </>
-              }   
-            />
-            <Route 
-              path='/legals' 
-              element={
-                <>
-                  <WebsiteHeader />
-                  <Legals /> 
-                </>
-              }   
-            />
+            <Route path='/' element={<WebsiteHeader />}> 
+              <Route index element={<Home />}/>
+              <Route path='/services' element={<Services />}/>
+              <Route path='/contact' element={<Contact />}/>
+              <Route path='/careers' element={<Careers />}/>
+              <Route path='/legals' element={<Legals />}/>
+            </Route>
+
             {/* Development Portal Routes */}
-            <Route 
-              path='/portal' 
-              element={
-                <>
-                  
-                  <Portal />
-                </>
-              } 
-            />
+            <Route path='/portal' element={<PortalHeader />}>
+              <Route index element={<Portal />}/>
+              <Route path='/portal/account' element={<Account />}/>
+            </Route>
 
             <Route 
               path='*'

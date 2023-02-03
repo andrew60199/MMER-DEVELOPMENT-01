@@ -54,6 +54,11 @@ p {
   font-weight: 700;
 }
 
+.small-icon {
+  height: 1.2rem;
+  width: 1.2rem;
+}
+
 /* 
 ################
 
@@ -74,6 +79,14 @@ p {
   display: flex;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-content-end {
+  justify-content: end;
+}
+
 .flex-direction-col {
   flex-direction: column;
 }
@@ -92,6 +105,14 @@ p {
   width: 100%;
 }
 
+.float-right {
+  float: right;
+}
+
+.align-content-center {
+  align-items: center;
+}
+
 /* 
 ################
 
@@ -108,8 +129,24 @@ p {
   padding-bottom: 1rem;
 }
 
+.padding-0101 {
+  padding: 0 1rem;
+}
+
+.padding-00-500 {
+  padding-right: .5rem;
+}
+
+.padding-1-25000 {
+  padding-top: 1.25rem;
+}
+
 .padding-0010 {
   padding-bottom: 1rem;
+}
+
+.padding-0001 {
+  padding-left: 1rem;
 }
 
 .padding-1111 {
@@ -123,6 +160,11 @@ p {
 .padding-1212 {
   padding: 1rem 2rem;
 }
+
+.padding-2020 {
+  padding: 2rem 0;
+}
+
 
 /* .mobile-padding-top-05 {
   padding-top: .5rem;
@@ -166,6 +208,10 @@ p {
 
 .margin-4000 {
   margin-top: 4rem;
+}
+
+.margin-10000 {
+  margin-top: 10rem;
 }
 
 
@@ -221,10 +267,21 @@ a:visited {
 
 } */
 
+@media screen and (max-width: 565px) {
+  .margin-10000 {
+    margin-top: 12rem;
+  }
+
+}
+
 /* Tablet and laptop displays */
 @media screen and (min-width: 769px) and (max-width: 1600px) {
   .m-display-padding-1111 {
     padding: 1rem;
+  }
+
+  .m-display-padding-0101 {
+    margin: 0 1rem 0 1rem;
   }
 
   .m-display-margin-1111 {
@@ -251,6 +308,15 @@ a:visited {
 
 /* Desktop displays*/
 @media screen and (min-width: 1600px) {
+
+  .l-display-padding-1000 {
+    padding-top: 1rem;
+  }
+
+  .l-display-padding-0101 {
+    margin: 0 1rem 0 1rem;
+  }
+
   .l-display-margin-1111 {
     margin: 1rem;
   }
@@ -265,10 +331,6 @@ a:visited {
 
   .l-display-margin-1000 {
     margin-top: 1rem;
-  }
-
-  .l-display-padding-1000 {
-    padding-top: 1rem;
   }
   
   .l-display-margin-0001 {
