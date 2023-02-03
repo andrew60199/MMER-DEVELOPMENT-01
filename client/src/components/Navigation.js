@@ -10,7 +10,7 @@ const Navigation = () => {
             {/* Conditional rendering so that this turns to a close icon */}
             {/* <nav className='mobile'>
                 <button className='bg-transparent border-none cursor' onClick={handleModel}>
-                    <img src='./icon-menu.svg'/>
+                    <img src='/icon-menu.svg'/>
                 </button>
             </nav> */}
             <nav className='l-display-margin-0100'>

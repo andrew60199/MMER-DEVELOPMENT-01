@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import PortalHeader from '../components/PortalHeader';
+import { Link, Navigate } from 'react-router-dom';
+import Auth from '../utils/auth'
 
 const Portal = () => {
     // Protect this route
@@ -8,11 +8,10 @@ const Portal = () => {
 
     return (
         <>
-            <PortalHeader />
             <div className='margin-1111 l-display-container'>
-                <h1 className='margin-4000'>Dashboard</h1>
+                <h1 className='margin-10000'>Dashboard</h1>
             </div>
-        </>      
+        </>     
     )
 }
 

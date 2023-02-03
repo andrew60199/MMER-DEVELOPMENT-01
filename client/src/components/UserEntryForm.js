@@ -58,6 +58,9 @@ const UserEntryForm = () => {
             if(err.message === 'No user found with this email address') {
                 setProgress('confirmPassword')
             }
+            if(err.message === 'Incorrect credentials'){
+                setShowError('Incorrect credentials')
+            }
         }
     }
 

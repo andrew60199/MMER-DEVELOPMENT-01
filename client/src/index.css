@@ -129,6 +129,10 @@ p {
   padding-bottom: 1rem;
 }
 
+.padding-0101 {
+  padding: 0 1rem;
+}
+
 .padding-00-500 {
   padding-right: .5rem;
 }
@@ -206,6 +210,10 @@ p {
   margin-top: 4rem;
 }
 
+.margin-10000 {
+  margin-top: 10rem;
+}
+
 
 
 /* 
@@ -265,6 +273,10 @@ a:visited {
     padding: 1rem;
   }
 
+  .m-display-padding-0101 {
+    margin: 0 1rem 0 1rem;
+  }
+
   .m-display-margin-1111 {
     margin: 1rem;
   }
@@ -289,6 +301,15 @@ a:visited {
 
 /* Desktop displays*/
 @media screen and (min-width: 1600px) {
+
+  .l-display-padding-1000 {
+    padding-top: 1rem;
+  }
+
+  .l-display-padding-0101 {
+    margin: 0 1rem 0 1rem;
+  }
+
   .l-display-margin-1111 {
     margin: 1rem;
   }
@@ -303,10 +324,6 @@ a:visited {
 
   .l-display-margin-1000 {
     margin-top: 1rem;
-  }
-
-  .l-display-padding-1000 {
-    padding-top: 1rem;
   }
   
   .l-display-margin-0001 {
