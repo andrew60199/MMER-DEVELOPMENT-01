@@ -8,7 +8,9 @@ Which we will show you properly soon.
 
 Aspects of the app that can / will be improved in the future: 
 - Password validation (length, digit and special character)
-- 
+- Add a way to change legal docs and then change all users terms to false. Then add a check that they need to accept the updated terms to continue... 
+- Fix the paymentMethod to reference another model with name, card number, expiry, cvv
+- Stages: 0 = Idea / needs to be reviewed before continuing, 1 = designing / planning / thinking / screenflows, 2 = developing, 3 = deploy / maintain / new features... 
 
 ## Table of Contents
   - [Description](#description)
