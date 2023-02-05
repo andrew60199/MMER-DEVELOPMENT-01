@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User } = require('../models');
+const { User, Client, Employee } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -11,6 +11,18 @@ const resolvers = {
         })
       }
       throw new AuthenticationError('You need to be logged in!');
+    },
+    client: async (parent, args, context) => {
+      if (context.user) {
+        return await Client.findOne({ userId: context.user._id })
+      }
+      throw new AuthenticationError('Unknown client');
+    },
+    employee: async (parent, args, context) => {
+      if (context.user) {
+        return await Employee.findOne({ userId: context.user._id })
+      }
+      throw new AuthenticationError('Unknown employee');
     },
   },
 
