@@ -3,6 +3,8 @@ import { Link, Navigate } from 'react-router-dom';
 import Auth from '../utils/auth'
 import { useQuery } from '@apollo/client';
 import { QUERY_ME } from '../utils/queries';
+import Client from '../components/Client';
+import Employee from '../components/Employee';
 
 const Portal = () => {
     // Imports
@@ -27,18 +29,10 @@ const Portal = () => {
             <main className='margin-1111 l-display-container'>
                 <h1 className='margin-10000'>Dashboard</h1>
                 {(loggedInUser.role === 'client') && 
-                    <>
-                        <section>
-                            <h2 className='regular'>Hello {loggedInUser.name}</h2>
-                        </section>
-                    </>                
+                    <Client user={loggedInUser}/>               
                 }
                 {(loggedInUser.role === 'employee') && 
-                    <>
-                        <section>
-                            <h2>Hello employee</h2>
-                        </section>
-                    </>                
+                    <Employee user={loggedInUser}/>               
                 }
             </main>
         </>     
