@@ -12,6 +12,9 @@ Aspects of the app that can / will be improved in the future:
 - Fix the paymentMethod to reference another model with name, card number, expiry, cvv
 - Stages: 0 = Idea / needs to be reviewed before continuing, 1 = designing / planning / thinking / screenflows, 2 = developing, 3 = deploy / maintain / new features... 
 
+Where I got up to:
+- Creating a project on the clients view.
+
 ## Table of Contents
   - [Description](#description)
   - [Table of Contents](#table-of-contents)
