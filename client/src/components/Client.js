@@ -40,11 +40,11 @@ const Client = (props) => {
         <>
             <section>
                 <h2 className='regular padding-0010'>Hello {props.user.name}!</h2>
-                
+                {(visible) && (error?.message === 'Client yet to be set up') && 
+                    <button className=' padding-1212 border-none bg-sunset-orange white bold cursor border-radius-1' onClick={handleCreateClient}>Finalise creating your account</button>
+                }
             </section>
-            {(visible) && (error?.message === 'Client yet to be set up') && 
-                <button className=' padding-1212 border-none bg-sunset-orange white bold cursor border-radius-1' onClick={handleCreateClient}>Finalise creating your account</button>
-            }
+            
         </>  
         
     )

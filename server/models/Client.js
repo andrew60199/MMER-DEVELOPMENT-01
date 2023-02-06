@@ -7,7 +7,8 @@ const clientSchema = new Schema(
     userId: {
         type: Schema.Types.ObjectId,
         ref: 'User',
-        required: true
+        required: true,
+        unique: true,
     },
     paymentMethod: {
         type: String,
