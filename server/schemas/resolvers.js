@@ -14,7 +14,13 @@ const resolvers = {
     },
     client: async (parent, args, context) => {
       if (context.user) {
-        return await Client.findOne({ userId: context.user._id })
+        const client = await Client.findOne({ userId: context.user._id })
+
+        if (!client) {
+          throw new AuthenticationError('Client yet to be set up');
+        }
+
+        return client
       }
       throw new AuthenticationError('Unknown client');
     },
@@ -49,6 +55,15 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
+    addClient: async (parent, { userId }) => {
+      // try {
+        const client = await Client.create({ userId })
+        return client
+      // } catch(error) {
+      //   console.log(error)
+      // }
+      
+    }
   }
 };
 

@@ -15,9 +15,7 @@ const Portal = () => {
                 // [] Try load their projects
                 // [] Otherwise prompt them to create a project
 
-    // Work out how to query apollo server and then console.log the their email, name and role...
     const { loading, data } = useQuery(QUERY_ME);
-    // console.log(data.me.role)
     const loggedInUser = data?.me || {};
 
     if (loading) {
@@ -27,7 +25,7 @@ const Portal = () => {
     return (
         <>
             <main className='margin-1111 l-display-container'>
-                <h1 className='margin-10000'>Dashboard</h1>
+                <h1 className='margin-10010'>Dashboard</h1>
                 {(loggedInUser.role === 'client') && 
                     <Client user={loggedInUser}/>               
                 }
