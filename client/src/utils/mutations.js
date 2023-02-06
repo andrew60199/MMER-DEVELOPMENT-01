@@ -24,3 +24,12 @@ export const ADD_USER = gql`
     }
 `;
 
+// https://stackoverflow.com/questions/50434490/why-i-got-error-cannot-query-field-xx-on-type-query
+export const ADD_CLIENT = gql`
+    mutation addClient($userId: ID!) {
+        addClient(userId: $userId) {
+            _id
+            userId
+        }
+    }
+`

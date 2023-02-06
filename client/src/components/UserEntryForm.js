@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, Navigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER, ADD_USER } from '../utils/mutations';
@@ -25,12 +25,12 @@ const UserEntryForm = () => {
         // [x] REGEX Check
             // [x] Send to password view
                 // [x] Try Login
-                    // [] Log them in
+                    // [x] Log them in
                 // [x] Otherwise they must be a new user
                     // [x] Conform password
                         // [x] Set name
                             // [x] Accept t&c's
-                                // [] try sign them up
+                                // [x] try sign them up
 
         setShowError('')
 
@@ -77,21 +77,26 @@ const UserEntryForm = () => {
     
     const handleCreateAccount = async (event) => {
         event.preventDefault()
+        if (terms === false) {
+            setShowError('To create an account on our platform you\'ll need to accept our terms of service and privacy policy.')
+        } else if (terms === true) {
+            // Create an account with all the states defined previously
+            // Try log them in
+            try {
+                const { data } = await addUser({
+                    variables: { name, email, password, terms },
+                }); 
+            
+                Auth.login(data.addUser.token);
 
-        // Create an account with all the states defined previously
-        // Try log them in
-        try {
-            const { data } = await addUser({
-                variables: { name, email, password, terms },
-            }); 
-        
-            Auth.login(data.addUser.token);
-
-        } catch (err) {
-            if(err) {
-                setShowError('Failed to create an account. Please try again later.')
+            } catch (err) {
+                if(err) {
+                    setShowError('Failed to create an account. Please try again later.')
+                }
             }
         }
+
+
     }
 
     const resetStates = () => {
